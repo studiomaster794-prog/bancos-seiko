@@ -144,6 +144,9 @@ body::after { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: 
 .stat-value{font-size:32px; font-weight:800; letter-spacing:-0.03em;}
 .stat-total .stat-value{background:linear-gradient(to right, #fff, #9CA3AF); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
 [data-theme="light"] .stat-total .stat-value{background:linear-gradient(to right, #111, #4B5563); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.stat-income .stat-value{color:var(--green);}
+.stat-expense .stat-value{color:var(--red);}
+.stat-balance .stat-value{color:var(--blue);}
 .stat-income .stat-label::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 10px var(--green);}
 .stat-expense .stat-label::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--red); box-shadow:0 0 10px var(--red);}
 .stat-balance .stat-label::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--blue); box-shadow:0 0 10px var(--blue);}
@@ -374,14 +377,15 @@ body::after { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: 
   .topbar{margin-bottom:24px;}
   .topbar h1{font-size:26px;}
 
-  /* STATS HORIZONTAL SCROLL (WALLET STYLE) */
+  /* STATS HORIZONTAL SCROLL (WALLET STYLE) -> CHANGED TO GRID */
   .stats-row{
-    display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:16px;
-    padding-bottom:16px; margin-bottom:24px; -webkit-overflow-scrolling:touch;
-    margin-left:-20px; margin-right:-20px; padding-left:20px; padding-right:20px;
+    display:grid; grid-template-columns:1fr 1fr; gap:12px;
+    padding-bottom:16px; margin-bottom:24px;
+    margin-left:0; margin-right:0; padding-left:0; padding-right:0;
   }
-  .stats-row::-webkit-scrollbar{display:none;}
-  .stat-card{min-width:260px; scroll-snap-align:center; flex-shrink:0; padding:20px;}
+  .stat-card{min-width:0; padding:16px;}
+  .stat-value{font-size:20px;}
+  .stat-label{font-size:11px; margin-bottom:8px;}
 
   .accounts-grid{grid-template-columns:1fr; gap:16px;}
   .account-card{padding:20px; border-radius:20px;}
