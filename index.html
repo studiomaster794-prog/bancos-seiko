@@ -142,8 +142,7 @@ body::after { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: 
 [data-theme="light"] .stat-card:hover{border-color:rgba(0,0,0,0.1);}
 .stat-label{font-size:13px; letter-spacing:.05em; text-transform:uppercase; color:var(--text-faint); font-weight:700; margin-bottom:12px; display:flex; align-items:center; gap:8px;}
 .stat-value{font-size:32px; font-weight:800; letter-spacing:-0.03em;}
-.stat-total .stat-value{background:linear-gradient(to right, #fff, #9CA3AF); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
-[data-theme="light"] .stat-total .stat-value{background:linear-gradient(to right, #111, #4B5563); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.stat-total .stat-value{color:var(--green);}
 .stat-income .stat-value{color:var(--green);}
 .stat-expense .stat-value{color:var(--red);}
 .stat-balance .stat-value{color:var(--blue);}
@@ -177,14 +176,7 @@ body::after { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: 
   color: #FFFFFF;
 }
 .account-id .account-name {
-  background: linear-gradient(90deg, var(--text) 40%, var(--acc-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-[data-theme="light"] .account-id .account-name {
-  background: linear-gradient(90deg, var(--text) 60%, var(--acc-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--acc-color);
 }
 
 .accounts-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px;}
@@ -204,7 +196,7 @@ body::after { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: 
 .account-star:active{transform:scale(1.2);}
 .account-star.fav{color:var(--gold); filter:drop-shadow(0 0 8px rgba(251,191,36,.4));}
 .account-balance-label{font-size:13px; color:var(--text-faint); font-weight:600; margin-bottom:4px;}
-.account-balance{font-size:28px; font-weight:800; margin-bottom:24px; letter-spacing:-0.02em;}
+.account-balance{font-size:28px; font-weight:800; margin-bottom:24px; letter-spacing:-0.02em; color:var(--green);}
 .account-balance.negative{color:var(--red);}
 .account-actions{display:grid; grid-template-columns:repeat(5,1fr); gap:8px;}
 .mini-btn{
